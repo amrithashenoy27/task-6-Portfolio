@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}" />
+</head>
+
+<body>
+    <header>
+        <h1>WELCOME TO MY PORTFOLIO</h1>
+        <nav>
+            <ul>
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="{{ url_for('contact') }}">Contact Me</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section id="about">
+        <h2>About Me</h2>
+        <p>
+            As a recent graduate with a Bachelor's degree in Computer Science, I am eager to apply my academic knowledge
+            and passion for technology in a dynamic and challenging role.
+        </p>
+        <h3>Technical Skills</h3>
+        <ul>
+            <li><strong>Programming Languages:</strong> Python, SQL, C, C++, Java, PHP, HTML & CSS, JavaScript</li>
+            <li><strong>Key Topics:</strong> RDBMS, Data Structures, Animation</li>
+            <li><strong>Frameworks & Libraries:</strong> pandas, numpy, scipy</li>
+            <li><strong>Other Software:</strong> Jupyter Notebook, Git, Visual Studio, PyCharm</li>
+        </ul>
+    </section>
+    <section id="projects">
+        <h2>Projects</h2>
+        <div class="project-card">
+            <h3>📚 Digital Library Using Python</h3>
+            <ul>
+                <li>Developed a Digital Library System that allows users to search, borrow, and manage books
+                    efficiently.</li>
+                <li>Built using Python for the frontend and SQL for the backend to ensure a seamless user experience.
+                </li>
+                <li>Incorporated features like book categorization, user authentication, and a search function.</li>
+            </ul>
+        </div>
+        <div class="project-card">
+            <h3>💰 Loan Prediction Using Machine Learning</h3>
+            <ul>
+                <li>Implemented a Loan Prediction Model using machine learning algorithms such as Decision Tree, Linear
+                    Regression, and Random Forest.</li>
+                <li>Analyzed applicant details to predict the likelihood of loan approval, enhancing financial
+                    decision-making for banks.</li>
+                <li><strong>Technologies Used:</strong> Python, Pandas, NumPy, Scikit-learn</li>
+                <li><strong>Algorithms Implemented:</strong> Decision Tree, Random Forest, Logistic Regression</li>
+            </ul>
+        </div>
+    </section>
+    <footer>
+        <p><a href="{{ url_for('contact') }}">Contact Me</a></p>
+    </footer>
+</body>
+
+</html>
